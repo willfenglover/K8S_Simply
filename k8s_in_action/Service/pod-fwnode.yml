@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mynode-metadata
+spec:
+  containers:
+  - image: cr.souche-inc.com/fw/fwnode:1.0
+    name: mynode-container
+    ports:
+    - containerPort: 8080
+      protocol: TCP

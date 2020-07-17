@@ -1,0 +1,20 @@
+apiVersion: apps/v1beta2
+kind: ReplicaSet
+metadata: 
+  name: rs-fwnode
+spec: 
+  replicas: 3
+  selector:
+    matchLabels:
+      app: fwnode
+  template:
+    metadata:
+      labels:
+        app: fwnode
+    spec:
+      containers:
+      - name: rs-fwnode
+        image: cr.souche-inc.com/fw/mynode:1.0
+        ports:
+        - containerPort: 8080
+ 
