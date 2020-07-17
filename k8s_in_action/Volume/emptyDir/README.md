@@ -14,3 +14,10 @@ kubectl port-forward --address 0.0.0.0 fortune 8081:80
 效果：
 html-generator容器每隔10s会生成新的内容到index.html
 web-server容器会将当前的fortune响应给客户端
+
+YAML解析：
+1. emptyDir的文件存储在内存中，默认是存储到工作节点的磁盘 
+emptyDir: 
+     medium: Memory
+
+
